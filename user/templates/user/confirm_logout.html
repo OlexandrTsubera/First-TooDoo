@@ -1,0 +1,10 @@
+{% extends 'first/base.html' %}
+
+
+{% block content %}
+<div class="container">
+  <h2>Підтвердження виходу</h2>
+  <h3>Ви впевнені, що хочете вийти з акаунту?</h3>
+  <a class="btn btn-warning" href="{% url 'logout' %}">Вийти</a>
+</div>
+{% endblock %}

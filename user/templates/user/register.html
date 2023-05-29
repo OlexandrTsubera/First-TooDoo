@@ -1,0 +1,15 @@
+{% extends 'first/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>Реєстрація користувача</h2>
+  <form method="post">
+    {% csrf_token %}
+    {% for f in form %}
+      <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
+      <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+    <button type="submit">Зареєструватися</button>
+  </form>
+</div>
+{% endblock %}

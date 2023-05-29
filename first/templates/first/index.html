@@ -1,0 +1,12 @@
+{% extends 'first/base.html' %}
+
+{% block content %}
+<main class="d-flex justify-content-center align-items-center">
+    <div class="container">
+        {% for c in context %}
+        <h2>{{ c.title }}</h2>
+        <a class="btn btn-primary" href="{{ c.get_absolute_url }}">Читати</a>
+      {% endfor %}
+    </div>
+</main>
+{% endblock %}

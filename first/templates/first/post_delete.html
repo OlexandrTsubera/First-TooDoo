@@ -1,0 +1,11 @@
+{% extends 'first/base.html' %}
+
+{% block content %}
+    <h1>Видалити пост</h1>
+    <p>Ви впевнені, що хочете видалити цей пост?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Видалити</button>
+        <a class="btn btn-secondary" href="{% url 'home' %}">Скасувати</a>
+    </form>
+{% endblock %}
